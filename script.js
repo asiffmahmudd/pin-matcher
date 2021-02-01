@@ -64,9 +64,10 @@ function validate(){
 }
 
 function startCount(){
+    document.getElementById('try').textContent = "Too many attempts. Please try again in 10s";
     document.getElementById("generate").disabled = true;
     document.getElementById("submit").disabled = true; 
-    let seconds = 10;
+    let seconds = 9;
     let interval = setInterval(timer, 1000);
     function timer(){
         document.getElementById('try').textContent = "Too many attempts. Please try again in "+ seconds + "s";
